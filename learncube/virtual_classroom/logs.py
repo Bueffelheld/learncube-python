@@ -12,7 +12,6 @@ class Logs(LearnCubeBase):
         if response.status_code != 200:
             raise Exception("Error during read", response.status_code, response.json())
         else:
-            print(response.json())
             return response
 
     def list_logs(self, **kwargs):
@@ -20,5 +19,4 @@ class Logs(LearnCubeBase):
         if response.status_code != 200:
             raise Exception("Error during read", response.status_code, response.json())
         else:
-            print(response.json())
             return response

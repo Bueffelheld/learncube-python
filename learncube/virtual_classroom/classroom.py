@@ -15,7 +15,6 @@ class Classroom(LearnCubeBase):
         if response.status_code != 201:
             raise Exception("Error during creation", response.status_code, response.json())
         else:
-            print(response.json())
             return response.json()
 
     def read_virtual_classroom(self, uuid):
@@ -23,7 +22,6 @@ class Classroom(LearnCubeBase):
         if response.status_code != 200:
             raise Exception("Error during read", response.status_code, response.json())
         else:
-            print(response.json())
             return response
 
     def update_virtual_classroom(self, uuid, **kwargs):
@@ -31,7 +29,6 @@ class Classroom(LearnCubeBase):
         if response.status_code != 200:
             raise Exception("Error during update", response.status_code, response.json())
         else:
-            print(response.json())
             return response.json()
 
     def delete_virtual_classroom(self, uuid):
@@ -39,5 +36,4 @@ class Classroom(LearnCubeBase):
         if response.status_code != 204:
             raise Exception("Error during delete", response.status_code, response.json())
         else:
-            print(response)
             return response
