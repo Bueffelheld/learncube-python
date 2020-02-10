@@ -3,9 +3,9 @@ from ..core import LearnCubeBase
 
 class Classroom(LearnCubeBase):
 
-    def __init__(self, public_key, private_key):
+    def __init__(self, public_key, private_key, api_base_path=None):
 
-        super().__init__(public_key, private_key)
+        super().__init__(public_key, private_key, api_base_path)
 
     def create_virtual_classroom(self, room_token, **kwargs):
         data = {

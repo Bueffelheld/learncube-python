@@ -3,9 +3,9 @@ from ..core import LearnCubeBase
 
 class Participants(LearnCubeBase):
 
-    def __init__(self, public_key, private_key):
+    def __init__(self, public_key, private_key, api_base_path=None):
 
-        super().__init__(public_key, private_key)
+        super().__init__(public_key, private_key, api_base_path)
 
     def read_participant(self, uuid):
         response = self.get('participants/{}/'.format(uuid))

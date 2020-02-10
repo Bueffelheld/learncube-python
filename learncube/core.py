@@ -1,13 +1,19 @@
 import requests
 
+default_base_path = 'https://app.learncube.com/api/virtual-classroom/{}'
+
 
 class LearnCubeBase:
-    _API_BASE_PATH = 'https://app.learncube_1.com/api/virtual-classroom/{}'
+    _API_BASE_PATH = None
     last_valid_token = None
 
-    def __init__(self, public_key, private_key):
+    def __init__(self, public_key, private_key, api_base_path=None):
         self._PUBLIC_KEY = public_key
         self._PRIVATE_KEY = private_key
+        if api_base_path is None:
+            self._API_BASE_PATH = default_base_path
+        else:
+            self._API_BASE_PATH = api_base_path
 
     def _get_valid_token(self):
         # check if token is valid

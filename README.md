@@ -117,6 +117,10 @@ Note: you can pass any information into the `**kwargs`
 ```python
 response = logs.list_logs(room_token="...")
 ```
+### Options
+#### Using a custom api base path
+Besides the `public_key` and `private_key` you can provide an `api_base_path`
+attribute, which will overwrite the default endpoint. 
 ## Links
 * [Büffelheld](https://bueffelheld.de/)
 * [Learncube](https://www.learncube.com/)
