@@ -17,6 +17,13 @@ class Classroom(LearnCubeBase):
         else:
             return response.json()
 
+    def list_virtual_classroom(self, **kwargs):
+        response = self.get('classrooms/', params=kwargs)
+        if response.status_code != 200:
+            raise Exception("Error during list", response.status_code, response.json())
+        else:
+            return response.json()
+
     def read_virtual_classroom(self, uuid):
         response = self.get('classrooms/{}'.format(uuid))
         if response.status_code != 200:

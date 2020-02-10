@@ -17,7 +17,9 @@ private_key = "..."
 v_c = Classroom(public_key=public_key, private_key=private_key)
 ```
 ##### List
-tdb
+```
+response = v_c.list_virtual_classroom(room_token="...")
+```
 ##### Create
 Note: you can pass any information into the **kwargs`
 ```python
