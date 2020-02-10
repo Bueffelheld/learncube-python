@@ -7,7 +7,7 @@ setuptools.setup(
     name="learncube",
     version="0.1.0",
     author="Fabian Riewe",
-    author_email="f.riewe@bueffelehld.de",
+    author_email="f.riewe@bueffelheld.de",
     description="A Python wrapper for the Learncube API",
     long_description=long_description,
     long_description_content_type="text/markdown",
