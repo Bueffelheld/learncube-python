@@ -22,7 +22,7 @@ class Classroom(LearnCubeBase):
         if response.status_code != 200:
             raise Exception("Error during read", response.status_code, response.json())
         else:
-            return response
+            return response.json()
 
     def update_virtual_classroom(self, uuid, **kwargs):
         response = self.put('classrooms/{}/'.format(uuid), json=kwargs)

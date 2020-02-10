@@ -12,11 +12,11 @@ class Participants(LearnCubeBase):
         if response.status_code != 200:
             raise Exception("Error during read", response.status_code, response.json())
         else:
-            return response
+            return response.json()
 
     def list_participants(self, **kwargs):
         response = self.get('participants/', params=kwargs)
         if response.status_code != 200:
-            raise Exception("Error during read", response.status_code, response.json())
+            raise Exception("Error during list", response.status_code, response.json())
         else:
-            return response
+            return response.json()
