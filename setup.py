@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="learncube",
-    version="0.0.1",
+    version="0.1.0",
     author="Fabian Riewe",
     author_email="f.riewe@bueffelehld.de",
     description="A Python wrapper for the Learncube API",
