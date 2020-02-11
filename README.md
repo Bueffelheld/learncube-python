@@ -1,4 +1,3 @@
-# !EXPERIMENTAL!
 # Learncube Python
 ## Installation
 Learncube-Python is available on PyPI:
